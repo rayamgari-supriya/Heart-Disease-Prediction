@@ -1,0 +1,118 @@
+🧠 HOW TO RUN DJANGO PROJECT (with MySQL) IN PYCHARM
+📍 Step 1: Open XAMPP and Start Services
+
+Open XAMPP Control Panel.
+
+Click Start next to:
+
+✅ Apache
+
+✅ MySQL
+
+Once both are green, your local MySQL server is running at localhost:3306.
+
+📂 Step 2: Open the Project in PyCharm
+
+Open PyCharm → click File → Open.
+
+Browse to your project folder (example:
+
+C:\Users\rayam\Downloads\HeartDisease prediction with navie bayas
+
+
+) and open it.
+
+Wait until indexing is complete.
+
+⚙️ Step 3: Set the Working Directory (if needed)
+
+If the terminal opens at the wrong path, type:
+
+cd "HeartDisease prediction with navie bayas/HeartDisease prediction with navie bayas/HeartDisease prediction"
+
+
+(Adjust the path if your folder structure differs.)
+
+You should now see your terminal prompt like:
+
+PS C:\Users\rayam\Downloads\HeartDisease prediction with navie bayas\HeartDisease prediction with navie bayas\HeartDisease prediction>
+
+🧱 Step 4: Run Migrations
+
+Before starting the server, apply database migrations:
+
+python manage.py migrate
+
+
+This will create all the necessary tables in MySQL (or SQLite if configured).
+
+🚀 Step 5: Run the Server
+
+Now start your Django development server:
+
+python manage.py runserver
+
+
+If everything is fine, you’ll see something like:
+
+Starting development server at http://127.0.0.1:8000/
+
+🌐 Step 6: Open the Project in Browser
+
+Go to your browser and type:
+
+http://127.0.0.1:8000/
+
+
+If your app has specific pages, try:
+
+/admin/ → for Django admin
+
+/predict/ → for prediction page
+
+/home/ → for homepage
+
+🔑 Step 7: (Optional) Create Superuser for Admin Panel
+
+If you need access to Django admin:
+
+python manage.py createsuperuser
+
+
+Then enter:
+
+Username
+
+Email (optional)
+
+Password
+
+After that, visit:
+
+http://127.0.0.1:8000/admin/
+
+
+and log in with your credentials.
+
+💾 Step 8: Stop the Server
+
+When done, press:
+
+Ctrl + C
+
+
+in the terminal to stop the running server.
+
+⚡ Quick Recap (Short Version)
+
+Open XAMPP → Start Apache & MySQL
+
+Open project in PyCharm
+
+Open terminal → cd into project folder
+
+Run → python manage.py migrate
+
+Run → python manage.py runserver
+
+Open browser → http://127.0.0.1:8000/
